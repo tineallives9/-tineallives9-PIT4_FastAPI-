@@ -20,8 +20,8 @@ def read_root():
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",  # Vite dev server
-        "https://fastapi-pit4.netlify.app",  # Netlify deployed frontend 
+        "",  # Vite dev server
+        "",  # Netlify deployed frontend 
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -44,11 +44,6 @@ def create_todo(todo: TodoCreate, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(db_todo)
     return db_todo
-
-# Get all to-do items
-@app.get("/todos/", response_model=list[TodoOut])
-def get_todos(db: Session = Depends(get_db)):
-    return db.query(Todo).all()
 
 # Get a single to-do item by ID
 @app.get("/todos/{todo_id}", response_model=TodoOut)
