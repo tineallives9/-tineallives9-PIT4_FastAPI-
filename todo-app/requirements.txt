@@ -1,10 +1,6 @@
-asgiref==3.8.1
-distlib==0.3.9
-Django==5.1.6
-django-cors-headers==4.7.0
-djangorestframework==3.15.2
-filelock==3.17.0
-platformdirs==4.3.6
-sqlparse==0.5.3
-tzdata==2025.1
-virtualenv==20.29.1
+fastapi==0.95.1
+uvicorn==0.22.0
+sqlalchemy==2.0.18
+pydantic==1.10.7
+python-dotenv==0.21.1
+alembic==1.10.3

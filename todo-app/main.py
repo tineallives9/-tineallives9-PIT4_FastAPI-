@@ -20,8 +20,7 @@ def read_root():
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "",  # Vite dev server
-        "",  # Netlify deployed frontend 
+        "tineallives9-PIT4_FastAPI-.git",  # Vite dev server
     ],
     allow_credentials=True,
     allow_methods=["*"],
